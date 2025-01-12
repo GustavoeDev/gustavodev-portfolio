@@ -17,6 +17,15 @@ const config: Config = {
       backgroundImage: {
         myPhotoImg: "url('/photo-gustavo.png')",
       },
+      keyframes: {
+        slide: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+      },
+      animation: {
+        slide: "slide 14s linear infinite",
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
