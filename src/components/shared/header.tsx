@@ -6,7 +6,7 @@ import { ModeToggle } from "./theme-toggle";
 
 export default function Header() {
   return (
-    <header className="w-full p-8 flex items-center justify-between text-base absolute">
+    <header className="w-full p-8 flex items-center justify-between text-base absolute text-textWhite">
       <AnimationHover as={Link} href="/">
         © Feito por Gustavo
       </AnimationHover>
