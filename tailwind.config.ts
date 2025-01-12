@@ -29,6 +29,13 @@ const config: Config = {
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        grayBackground: {
+          light: "#999d9e",
+          dark: "hsl(var(--card))",
+        },
+        grayDark: "#1C1D20",
+        textWhite: "#ffffff",
+        btnColor: "#455CE9",
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
@@ -72,6 +79,9 @@ const config: Config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      lineHeight: {
+        0: "0",
       },
     },
   },
