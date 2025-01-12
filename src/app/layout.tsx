@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import "../styles/globals.css";
 import { cn } from "@/lib/utils";
 import Header from "@/components/shared/header";
+import { ThemeProvider } from "@/components/shared/theme-provider";
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
@@ -37,8 +38,15 @@ export default function RootLayout({
           geistMono.variable
         )}
       >
-        <Header />
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

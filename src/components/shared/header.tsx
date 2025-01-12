@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 import AnimationHover from "./animation-hover";
+import { ModeToggle } from "./theme-toggle";
 
 export default function Header() {
   return (
-    <header className="w-full p-8 flex items-center justify-between text-lg absolute">
+    <header className="w-full p-8 flex items-center justify-between text-base absolute">
       <AnimationHover as={Link} href="/">
         © Feito por Gustavo
       </AnimationHover>
@@ -19,6 +20,7 @@ export default function Header() {
         <AnimationHover as={Link} href="/contact" className="link-with-hover">
           Contato
         </AnimationHover>
+        <ModeToggle />
       </nav>
     </header>
   );
