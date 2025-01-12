@@ -14,6 +14,9 @@ const config: Config = {
         sans: ["var(--font-geist-sans)", ...fontFamily.sans],
         title: ["var(--font-geist-mono)", ...fontFamily.sans],
       },
+      backgroundImage: {
+        myPhotoImg: "url('/photo-gustavo.png')",
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
