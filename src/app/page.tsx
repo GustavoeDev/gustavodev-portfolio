@@ -1,8 +1,9 @@
 export default function Home() {
   return (
-    <>
-      <h2 className="">Hello World</h2>
-      <h2 className="font-title">Hello World</h2>
-    </>
+    <main>
+      <div className="h-screen bg-card bg-myPhotoImg bg-contain bg-no-repeat bg-center">
+        oi
+      </div>
+    </main>
   );
 }
