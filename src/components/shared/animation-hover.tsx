@@ -7,15 +7,19 @@ interface AnimationHoverProps {
   children: React.ReactNode;
   target?: string;
   className?: string;
+  onClick?: (event: any) => void;
+  rel?: string;
 }
 
 export default function AnimationHover({
   as: Component = "a",
-  factor = 0.3,
+  factor = 0.2,
   children,
   href,
   target,
   className,
+  onClick,
+  rel,
   ...props
 }: AnimationHoverProps) {
   const [offset, setOffset] = useState({ x: 0, y: 0 });
@@ -41,6 +45,8 @@ export default function AnimationHover({
       {...(href && { href })}
       {...(target && { target })}
       {...(className && { className })}
+      {...(onClick && { onClick })}
+      {...(rel && { rel })}
       {...props}
     >
       {children}
