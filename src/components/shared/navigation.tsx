@@ -13,21 +13,23 @@ import AnimationHover from "./animation-hover";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { List } from "lucide-react";
+import { ModeToggle } from "./theme-toggle";
+import { NavigationContext } from "@/contexts/openNavigationContext";
 
 export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const { handleOpenNavigation, isOpen, isVisible, handleBtnVisible } =
+    useContext(NavigationContext);
 
   const location = usePathname();
 
   const handleScroll = () => {
     if (window.scrollY > 100) {
-      setIsVisible(true);
+      handleBtnVisible(true);
     } else {
-      setIsVisible(false);
-      setIsOpen(false);
+      handleBtnVisible(false);
+      handleOpenNavigation(false);
     }
   };
 
@@ -39,7 +41,7 @@ export default function Navigation() {
   }, []);
 
   return (
-    <Sheet open={isOpen} onOpenChange={setIsOpen}>
+    <Sheet open={isOpen} onOpenChange={handleOpenNavigation}>
       <SheetTrigger asChild>
         <AnimationHover
           as="button"
@@ -62,11 +64,11 @@ export default function Navigation() {
         </AnimationHover>
       </SheetTrigger>
 
-      <SheetContent className="bg-grayDark border-none">
+      <SheetContent className="bg-grayDark border-none max-[520px]:w-screen">
         <SheetTitle></SheetTitle>
         <SheetDescription></SheetDescription>
 
-        <div className="h-full flex flex-col justify-center gap-10 px-12">
+        <div className="h-full flex flex-col justify-center gap-10 px-8">
           <div className="flex flex-col gap-6 text-zinc-500">
             <p className="text-[0.65rem] font-bold">NAVEGAÇÃO</p>
             <hr className="border-none h-px bg-zinc-500" />
@@ -93,31 +95,35 @@ export default function Navigation() {
             ))}
           </div>
 
-          <div className="text-zinc-500 flex flex-col gap-4">
-            <p className="text-[0.65rem] font-bold">REDES SOCIAIS</p>
-            <div className="flex gap-6">
-              {[
-                { href: "https://github.com/GustavoeDev/", label: "Github" },
-                {
-                  href: "https://www.linkedin.com/in/gustavo-emanuel-52bb29344/",
-                  label: "Linkedin",
-                },
-                {
-                  href: "https://www.instagram.com/gustavox8_/",
-                  label: "Instagram",
-                },
-              ].map(({ href, label }) => (
-                <AnimationHover
-                  key={href}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-textWhite relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-white after:transition-[width] after:duration-300 hover:after:w-full"
-                >
-                  {label}
-                </AnimationHover>
-              ))}
+          <div className="text-zinc-500 flex items-center gap-5 justify-between">
+            <div className="flex flex-col gap-4 justify-between">
+              <p className="text-[0.65rem] font-bold">REDES SOCIAIS</p>
+
+              <div className="flex gap-6">
+                {[
+                  { href: "https://github.com/GustavoeDev/", label: "Github" },
+                  {
+                    href: "https://www.linkedin.com/in/gustavo-emanuel-52bb29344/",
+                    label: "Linkedin",
+                  },
+                  {
+                    href: "https://www.instagram.com/gustavox8_/",
+                    label: "Instagram",
+                  },
+                ].map(({ href, label }) => (
+                  <AnimationHover
+                    key={href}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-textWhite relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-white after:transition-[width] after:duration-300 hover:after:w-full"
+                  >
+                    {label}
+                  </AnimationHover>
+                ))}
+              </div>
             </div>
+            <ModeToggle />
           </div>
         </div>
       </SheetContent>
