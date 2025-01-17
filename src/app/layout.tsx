@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className="max-lg:text-[87.5%]">
       <body
         className={cn(
           "bg-background font-sans antialiased relative",
