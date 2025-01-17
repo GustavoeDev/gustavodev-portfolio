@@ -6,6 +6,8 @@ export default function Intro() {
   return (
     <>
       <AnimationHover
+        as={Link}
+        href="/about"
         factor={0.1}
         className="relative w-80 h-80 overflow-hidden rounded-full bg-grayBackground-light cursor-pointer group"
       >
@@ -16,12 +18,9 @@ export default function Intro() {
           height={4096}
           className="object-cover scale-150 translate-y-20"
         />
-        <Link
-          href="/about"
-          className="absolute inset-0 bg-black opacity-0 group-hover:opacity-80 transition-opacity duration-300 flex items-center justify-center"
-        >
+        <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-80 transition-opacity duration-300 flex items-center justify-center">
           <span className="text-white text-xl font-medium">Sobre mim</span>
-        </Link>
+        </div>
       </AnimationHover>
       <div className="max-w-[37.5rem] flex flex-col gap-3">
         <h1 className="font-title text-4xl font-bold">
