@@ -1,28 +1,21 @@
 import AnimationHover from "@/components/shared/animation-hover";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Intro() {
   return (
     <>
-      <AnimationHover
-        as={Link}
-        href="/about"
-        factor={0.1}
-        className="relative w-80 h-80 overflow-hidden rounded-full bg-grayBackground-light cursor-pointer group"
-      >
+      <div className="w-96 h-96 overflow-hidden rounded-full bg-grayBackground-light">
         <Image
           src="/about.png"
           alt="Descrição da imagem"
           width={2731}
           height={4096}
-          className="object-cover scale-150 translate-y-20"
+          className="object-cover scale-150 translate-y-24 translate-x-2"
         />
-        <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-80 transition-opacity duration-300 flex items-center justify-center">
-          <span className="text-white text-xl font-medium">Sobre mim</span>
-        </div>
-      </AnimationHover>
-      <div className="max-w-[37.5rem] flex flex-col gap-3">
+      </div>
+      <div className="max-w-[36rem] flex flex-col gap-3 items-start">
         <h1 className="font-title text-4xl font-bold">
           Cada linha de código é uma oportunidade de inovação
         </h1>
@@ -34,6 +27,23 @@ export default function Intro() {
           Sistemas, apaixonado por desenvolvimento web e focado em criar
           soluções inovadoras com tecnologias modernas.
         </span>
+        <AnimationHover
+          as={Link}
+          href="/about"
+          className={cn(
+            "rounded-full p-6 bg-grayDark inline-flex items-center overflow-hidden justify-center w-36 h-36 ml-auto",
+            "transition-transform duration-500 ease-in-out",
+            "transition-opacity duration-500 ease-in-out",
+            "before:content-[''] before:absolute before:inset-0 before:bg-blue-500",
+            "before:transition-[clip-path] before:duration-500 before:ease-in-out",
+            "before:[clip-path:ellipse(20%_0%_at_50%_0%)]",
+            "hover:before:[clip-path:ellipse(150%_150%_at_50%_0%)]"
+          )}
+        >
+          <p className="text-md font-medium text-textWhite relative z-[9998]">
+            Sobre mim
+          </p>
+        </AnimationHover>
       </div>
     </>
   );
