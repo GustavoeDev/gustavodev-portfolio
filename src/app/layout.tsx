@@ -8,6 +8,7 @@ import Header from "@/components/shared/header";
 import { ThemeProvider } from "@/components/shared/theme-provider";
 import Navigation from "@/components/shared/navigation";
 import Footer from "@/components/shared/footer";
+import NavigationProvider from "@/contexts/openNavigationContext";
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
@@ -46,10 +47,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navigation />
-          <Header />
-          {children}
-          <Footer />
+          <NavigationProvider>
+            <Navigation />
+            <Header />
+            {children}
+            <Footer />
+          </NavigationProvider>
         </ThemeProvider>
       </body>
     </html>
