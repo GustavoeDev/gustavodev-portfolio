@@ -22,7 +22,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="py-10 max-w-[70rem] mx-auto flex flex-col items-center justify-center gap-6">
+    <footer className="py-10 max-w-[70rem] px-8 mx-auto flex flex-col items-center justify-center gap-6">
       <p className="text-zinc-600 dark:text-zinc-400 text-sm font-title">
         Copyright · 2025 - gustavoe.dev
       </p>
