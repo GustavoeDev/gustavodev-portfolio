@@ -29,7 +29,7 @@ export default function Footer() {
       <div className="flex items-center w-full justify-between">
         <TooltipProvider>
           <Tooltip>
-            <TooltipTrigger>
+            <TooltipTrigger asChild>
               <Button
                 variant="ghost"
                 onClick={handleShowSocial}
