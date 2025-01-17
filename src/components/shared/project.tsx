@@ -30,6 +30,7 @@ export default function Project() {
           alt="Project image"
           width={400}
           height={250}
+          className="rounded-sm"
         />
         <div className="space-y-2 flex flex-col justify-between w-full">
           <div className="flex flex-col gap-1">
@@ -39,7 +40,7 @@ export default function Project() {
             </p>
           </div>
 
-          <Link href="#" className="flex items-center justify-between text-xs">
+          <Link href="#" className="flex items-center justify-between text-sm">
             <p>Projeto no github</p>
             <ExternalLink size={18} />
           </Link>
