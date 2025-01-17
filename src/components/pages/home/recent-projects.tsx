@@ -19,7 +19,7 @@ export default function RecentProjects() {
           className="p-5 z-[50px] border border-gray-200 dark:border-gray-500 overflow-hidden dark:text-gray-300 dark:hover:text-textWhite hover:text-textWhite transition-colors duration-300 rounded-full cursor-pointer before:content-[''] before:absolute before:inset-0 before:bg-blue-500 before:transition-[clip-path] before:duration-500 before:ease-in-out before:[clip-path:ellipse(20%_0%_at_50%_0%)] hover:before:[clip-path:ellipse(150%_150%_at_50%_0%)]"
         >
           <p className="relative z-[999px] flex gap-1">
-            Mais projetos <span className="text-[10px]">18</span>
+            Mais projetos <span className="text-[0.625rem]">18</span>
           </p>
         </AnimationHover>
       </div>

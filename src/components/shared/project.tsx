@@ -24,7 +24,7 @@ export default function Project() {
           <hr className="border-t border-gray-200 dark:border-gray-500 pointer-events-none" />
         </Link>
       </HoverCardTrigger>
-      <HoverCardContent className="z-50 flex gap-5 w-[700px] max-w-3xl p-4">
+      <HoverCardContent className="z-50 flex gap-5 w-[43.75rem] max-w-3xl p-4">
         <Image
           src="/project-image.png"
           alt="Project image"
