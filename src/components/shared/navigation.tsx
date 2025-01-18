@@ -54,7 +54,7 @@ export default function Navigation() {
               : "opacity-0 scale-0",
             !isVisible && "invisible",
             "z-[9999]",
-            "before:content-[''] before:absolute before:inset-0 before:bg-blue-500",
+            "before:content-[''] before:absolute before:inset-0 before:bg-btnColor",
             "before:transition-[clip-path] before:duration-500 before:ease-in-out",
             "before:[clip-path:ellipse(20%_0%_at_50%_0%)]",
             "hover:before:[clip-path:ellipse(150%_150%_at_50%_0%)]"

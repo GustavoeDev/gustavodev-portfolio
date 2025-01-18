@@ -79,7 +79,7 @@ export default function About() {
               "ml-auto",
               "transition-transform duration-500 ease-in-out",
               "transition-opacity duration-500 ease-in-out",
-              "before:content-[''] before:absolute before:inset-0 before:bg-blue-500",
+              "before:content-[''] before:absolute before:inset-0 before:bg-btnColor",
               "before:transition-[clip-path] before:duration-500 before:ease-in-out",
               "before:[clip-path:ellipse(20%_0%_at_50%_0%)]",
               "hover:before:[clip-path:ellipse(150%_150%_at_50%_0%)]",

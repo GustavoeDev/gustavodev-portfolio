@@ -32,9 +32,9 @@ const config: Config = {
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        grayDark: "#1C1D20",
+        grayDark: "#23242A",
         textWhite: "#ffffff",
-        btnColor: "#455CE9",
+        btnColor: "#566BFF",
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
