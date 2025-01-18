@@ -5,13 +5,13 @@ import Link from "next/link";
 
 export default function Intro() {
   return (
-    <div className="h-screen max-w-[70rem] px-8 flex items-center justify-center gap-12 w-full mx-auto bg-[url('/bg-portfolio.png')] bg-cover bg-center max-[830px]:my-16 max-[580px]:my-20 max-[830px]:flex-col max-[500px]:my-32">
+    <div className="h-screen max-w-[70rem] px-8 flex items-center justify-center gap-12 w-full mx-auto max-[830px]:my-16 max-[580px]:my-20 max-[830px]:flex-col max-[500px]:my-32">
       <div className="w-96 h-96 max-[500px]:h-80 max-[500px]:w-80 rounded-full overflow-hidden bg-grayBackground-light flex-shrink-0 relative">
         <Image
           src="/about.png"
           alt="Descrição da imagem"
-          width={2731}
-          height={4096}
+          width={1280}
+          height={720}
           className="absolute object-cover scale-150 translate-y-24 translate-x-2"
         />
       </div>
@@ -23,7 +23,7 @@ export default function Intro() {
           <p className="text-zinc-600 dark:text-zinc-400">
             Desenvolvedor FrontEnd
           </p>
-          <span className="text-zinc-800 dark:text-textWhite">
+          <span className="text-zinc-800 dark:text-textWhite leading-[1.6]">
             Sou Gustavo Emanuel, estudante de Análise e Desenvolvimento de
             Sistemas, apaixonado por desenvolvimento web e focado em criar
             soluções inovadoras com tecnologias modernas.
