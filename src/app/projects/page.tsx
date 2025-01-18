@@ -4,6 +4,16 @@ import AnimationHover from "@/components/shared/animation-hover";
 import Project from "@/components/shared/project";
 import { useState } from "react";
 
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
+
 export default function Projects() {
   const [isSelected, setIsSelected] = useState<string | null>("");
 
@@ -65,6 +75,23 @@ export default function Projects() {
           <Project />
           <Project />
           <Project />
+        </div>
+        <div className="mt-8">
+          <Pagination>
+            <PaginationContent>
+              <PaginationItem>
+                <PaginationPrevious href="#" />
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationLink href="#">1</PaginationLink>
+                <PaginationLink href="#">2</PaginationLink>
+                <PaginationLink href="#">3</PaginationLink>
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationNext href="#" />
+              </PaginationItem>
+            </PaginationContent>
+          </Pagination>
         </div>
       </div>
     </div>
