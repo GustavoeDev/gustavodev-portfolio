@@ -26,6 +26,9 @@ const config: Config = {
       animation: {
         slide: "slide 14s linear infinite",
       },
+      rotate: {
+        "360": "360deg",
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

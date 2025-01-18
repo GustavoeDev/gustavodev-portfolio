@@ -76,25 +76,3 @@ body {
     @apply bg-background text-foreground;
   }
 }
-
-@layer components {
-  .link-with-hover::after {
-    content: "";
-    position: absolute;
-    bottom: -0.75em;
-    left: 50%;
-    display: block;
-    width: calc(clamp(16px, 1.2vw, 19px) / 3.5);
-    height: calc(clamp(16px, 1.2vw, 19px) / 3.5);
-    border-radius: 50%;
-    background: #ffffff;
-    transform: translate(-50%, -50%) scale(0) rotate(0.001deg);
-    transition: transform 0.4s ease;
-    will-change: transform;
-  }
-
-  .link-with-hover:hover::after,
-  .link-with-hover.active::after {
-    transform: translate(-50%, -50%) scale(1) rotate(360deg);
-  }
-}
