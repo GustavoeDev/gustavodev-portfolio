@@ -10,7 +10,7 @@ export default function Header() {
   const { handleOpenNavigation } = useContext(NavigationContext);
 
   return (
-    <header className="w-full p-8 flex items-center justify-between text-base absolute text-textWhite">
+    <header className="w-full p-8 flex items-center justify-between text-base absolute text-textWhite font-semibold">
       <AnimationHover as={Link} href="/">
         © Feito por Gustavo
       </AnimationHover>
