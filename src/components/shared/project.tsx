@@ -17,11 +17,11 @@ export default function Project() {
     <HoverCard openDelay={300}>
       {isMobile ? (
         <Link href="/" className="block">
-          <div className="px-6 py-8 flex items-center justify-between transition-all duration-700">
+          <div className="px-6 py-8 flex items-center justify-between transition-all gap-3 duration-700">
             <div className="flex flex-col gap-3">
               <h2 className="text-3xl font-title">Nome do projeto</h2>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 max-[480px]:flex-col max-[480px]:gap-2">
               <span>Typescript</span>
               <span>CSS</span>
             </div>
@@ -31,7 +31,7 @@ export default function Project() {
       ) : (
         <HoverCardTrigger asChild>
           <Link href="/" className="block">
-            <div className="px-6 py-8 flex items-center justify-between hover:mx-8 transition-all duration-700 hover:text-zinc-400">
+            <div className="px-6 py-8 flex items-center justify-between hover:mx-8 gap-3 transition-all duration-700 hover:text-zinc-400">
               <div className="flex flex-col gap-3">
                 <h2 className="text-3xl font-title">Nome do projeto</h2>
               </div>
