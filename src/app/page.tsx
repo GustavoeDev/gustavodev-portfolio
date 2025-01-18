@@ -6,7 +6,7 @@ import RecentProjects from "@/components/pages/home/recent-projects";
 export default function Home() {
   return (
     <main>
-      <div className="h-screen dark:bg-grayBackground-dark bg-grayBackground-light bg-myPhotoImg bg-contain bg-no-repeat bg-bottom flex flex-col justify-end max-md:flex-col-reverse max-md:justify-start">
+      <div className="h-screen dark:bg-background bg-zinc-400 bg-myPhotoImg bg-contain bg-no-repeat bg-bottom flex flex-col justify-end max-md:flex-col-reverse max-md:justify-start">
         <PersonalInfo />
         <InfiniteName />
       </div>

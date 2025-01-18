@@ -32,10 +32,6 @@ const config: Config = {
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        grayBackground: {
-          light: "#999d9e",
-          dark: "hsl(var(--card))",
-        },
         grayDark: "#1C1D20",
         textWhite: "#ffffff",
         btnColor: "#455CE9",

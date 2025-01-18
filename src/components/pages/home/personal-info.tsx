@@ -9,7 +9,7 @@ export default function PersonalInfo() {
           <p>Pau dos Ferros</p>
           <p>Rio Grande do Norte</p>
         </div>
-        <span className="p-4 rounded-[999px] inline-flex items-center justify-center dark:bg-grayBackground-dark bg-grayBackground-light max-md:p-0 max-md:rounded-none max-md:my-10 max-md:mr-6">
+        <span className="p-4 rounded-[999px] inline-flex items-center justify-center dark:bg-background bg-zinc-400 max-md:p-0 max-md:rounded-none max-md:my-10 max-md:mr-6">
           <HiGlobeAlt size={32} />
         </span>
       </div>

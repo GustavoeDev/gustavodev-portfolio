@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Intro() {
   return (
     <div className="h-screen max-w-[70rem] px-8 flex items-center justify-center gap-12 w-full mx-auto max-[830px]:my-16 max-[580px]:my-20 max-[830px]:flex-col max-[500px]:my-32">
-      <div className="w-96 h-96 max-[500px]:h-80 max-[500px]:w-80 rounded-full overflow-hidden bg-grayBackground-light flex-shrink-0 relative">
+      <div className="w-96 h-96 max-[500px]:h-80 max-[500px]:w-80 rounded-full overflow-hidden bg-zinc-400 flex-shrink-0 relative">
         <Image
           src="/about.png"
           alt="Descrição da imagem"
