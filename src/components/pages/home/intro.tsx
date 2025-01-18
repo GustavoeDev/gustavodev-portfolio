@@ -20,7 +20,7 @@ export default function Intro() {
           <h1 className="font-title text-4xl font-bold">
             Cada linha de código é uma oportunidade de inovação
           </h1>
-          <p className="text-gray-600 dark:text-gray-500">
+          <p className="text-zinc-600 dark:text-zinc-400">
             Desenvolvedor FrontEnd
           </p>
           <span className="text-gray-800 dark:text-textWhite">
