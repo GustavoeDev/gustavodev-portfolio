@@ -11,7 +11,7 @@ export default function Home() {
         <InfiniteName />
       </div>
       <Intro />
-      <div className="min-h[100vh] max-w-[70rem] px-8 mx-auto bg-[url('/bg-portfolio.png')] bg-cover bg-center">
+      <div className="min-h[100vh] max-w-[70rem] px-8 mx-auto">
         <h2 className="text-4xl max-w-[46.875rem] font-title font-medium">
           Na intersecção entre criatividade e tecnologia, desenvolvo soluções
           web que transcendem o comum
