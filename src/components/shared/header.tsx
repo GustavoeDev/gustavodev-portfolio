@@ -28,8 +28,8 @@ export default function Header() {
 
   return (
     <header
-      className={`w-full p-8 flex items-center justify-between text-base absolute text-textWhite font-medium ${
-        pathname === "/" ? "" : "text-zinc-800 dark:text-textWhite"
+      className={`w-full p-8 flex items-center justify-between text-base absolute text-white font-medium ${
+        pathname === "/" ? "" : "text-zinc-800 dark:text-white"
       }`}
     >
       <AnimationHover as={Link} href="/">

@@ -3,7 +3,7 @@ import { HiArrowDownRight } from "react-icons/hi2";
 
 export default function PersonalInfo() {
   return (
-    <div className="w-full flex items-end justify-between text-textWhite font-medium max-md:flex-row-reverse">
+    <div className="w-full flex items-end justify-between text-white font-medium max-md:flex-row-reverse">
       <div className="flex items-center justify-between gap-8 pl-8 pr-4 py-4 rounded-tr-[999px] rounded-br-[999px] bg-grayDark max-md:p-0 max-md:bg-transparent">
         <div className="max-md:hidden">
           <p>Pau dos Ferros</p>

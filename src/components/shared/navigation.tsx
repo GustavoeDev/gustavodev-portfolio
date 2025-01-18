@@ -86,7 +86,7 @@ export default function Navigation() {
                 as={Link}
                 href={href}
                 className={cn(
-                  "text-5xl text-textWhite relative after:content-[''] after:absolute after:top-1/2 after:-left-6 after:w-2 after:h-2 after:bg-white after:rounded-full after:transform after:-translate-y-1/2 after:scale-0 after:transition-transform after:duration-400 hover:after:scale-100",
+                  "text-5xl text-white relative after:content-[''] after:absolute after:top-1/2 after:-left-6 after:w-2 after:h-2 after:bg-white after:rounded-full after:transform after:-translate-y-1/2 after:scale-0 after:transition-transform after:duration-400 hover:after:scale-100",
                   location === href ? "after:scale-100" : ""
                 )}
                 onClick={() => handleOpenNavigation(false)}
@@ -117,7 +117,7 @@ export default function Navigation() {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-textWhite relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-white after:transition-[width] after:duration-300 hover:after:w-full"
+                    className="text-sm text-white relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-white after:transition-[width] after:duration-300 hover:after:w-full"
                   >
                     {label}
                   </AnimationHover>

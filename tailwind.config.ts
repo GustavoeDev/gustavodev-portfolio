@@ -33,7 +33,6 @@ const config: Config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         grayDark: "#23242A",
-        textWhite: "#ffffff",
         btnColor: "#566BFF",
         card: {
           DEFAULT: "hsl(var(--card))",

@@ -45,9 +45,9 @@ export default function Projects() {
               <AnimationHover
                 key={item.year}
                 as="button"
-                className={`p-5 z-[50px] border border-zinc-200 dark:border-zinc-500 overflow-hidden dark:hover:text-textWhite hover:text-textWhite transition-colors duration-300 rounded-full cursor-pointer before:content-[''] before:absolute before:inset-0 before:bg-btnColor before:transition-[clip-path] before:duration-500 before:ease-in-out before:[clip-path:ellipse(20%_0%_at_50%_0%)] ${
+                className={`p-5 z-[50px] border border-zinc-200 dark:border-zinc-500 overflow-hidden dark:hover:text-white hover:text-white transition-colors duration-300 rounded-full cursor-pointer before:content-[''] before:absolute before:inset-0 before:bg-btnColor before:transition-[clip-path] before:duration-500 before:ease-in-out before:[clip-path:ellipse(20%_0%_at_50%_0%)] ${
                   isSelected === item.year
-                    ? "bg-zinc-800 dark:bg-grayDark text-textWhite"
+                    ? "bg-zinc-800 dark:bg-grayDark text-white"
                     : "hover:before:[clip-path:ellipse(150%_150%_at_50%_0%)]"
                 }`}
                 onClick={() => setIsSelected(item.year)}

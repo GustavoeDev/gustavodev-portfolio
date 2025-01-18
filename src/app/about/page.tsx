@@ -86,7 +86,7 @@ export default function About() {
               "max-[500px]:mx-0"
             )}
           >
-            <p className="text-md font-medium text-textWhite relative z-[9998]">
+            <p className="text-md font-medium text-white relative z-[9998]">
               Contato
             </p>
           </AnimationHover>
