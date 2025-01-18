@@ -89,6 +89,7 @@ export default function Navigation() {
                   "text-5xl text-textWhite relative after:content-[''] after:absolute after:top-1/2 after:-left-6 after:w-2 after:h-2 after:bg-white after:rounded-full after:transform after:-translate-y-1/2 after:scale-0 after:transition-transform after:duration-400 hover:after:scale-100",
                   location === href ? "after:scale-100" : ""
                 )}
+                onClick={() => handleOpenNavigation(false)}
               >
                 {label}
               </AnimationHover>
