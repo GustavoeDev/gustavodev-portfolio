@@ -5,43 +5,80 @@ import AnimationHover from "./animation-hover";
 import { ModeToggle } from "./theme-toggle";
 import { NavigationContext } from "@/contexts/openNavigationContext";
 import { useContext } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const { handleOpenNavigation } = useContext(NavigationContext);
+  const pathname = usePathname();
+
+  const navigationItems = [
+    {
+      label: "Projetos",
+      path: "/projects",
+    },
+    {
+      label: "Sobre mim",
+      path: "/about",
+    },
+    {
+      label: "Contato",
+      path: "/contact",
+    },
+  ];
 
   return (
-    <header className="w-full p-8 flex items-center justify-between text-base absolute text-textWhite font-semibold">
+    <header
+      className={`w-full p-8 flex items-center justify-between text-base absolute text-textWhite font-medium ${
+        pathname === "/about" || pathname === "/projects"
+          ? "text-zinc-800 dark:text-textWhite"
+          : ""
+      }`}
+    >
       <AnimationHover as={Link} href="/">
         © Feito por Gustavo
       </AnimationHover>
       <nav className="flex items-center gap-8">
-        <AnimationHover
-          as={Link}
-          href="/projects"
-          className="link-with-hover max-sm:hidden"
-        >
-          Projetos
-        </AnimationHover>
-        <AnimationHover
-          as={Link}
-          href="/about"
-          className="link-with-hover max-sm:hidden"
-        >
-          Sobre mim
-        </AnimationHover>
-        <AnimationHover
-          as={Link}
-          href="/contact"
-          className="link-with-hover max-sm:hidden"
-        >
-          Contato
-        </AnimationHover>
+        {navigationItems.map((item) => (
+          <AnimationHover
+            as={Link}
+            href={item.path}
+            key={item.label}
+            className="group relative max-sm:hidden"
+          >
+            {item.label}
+            <span
+              className={`absolute -bottom-3 left-1/2 w-1.5 h-1.5 ${
+                pathname === "/about" || pathname === "/projects"
+                  ? "bg-zinc-800  dark:bg-white"
+                  : "bg-white"
+              } rounded-full 
+              transform -translate-x-1/2 -translate-y-1/2 scale-0 rotate-0
+              transition-transform duration-400 ease-in-out
+              group-hover:scale-100 group-hover:rotate-360
+              peer-active:scale-100 peer-active:rotate-360
+              ${pathname === item.path ? "scale-100" : ""}
+              `}
+            />
+          </AnimationHover>
+        ))}
+
         <AnimationHover
           as="button"
-          className="link-with-hover hidden max-sm:block"
+          className="group relative hidden max-sm:block"
           onClick={() => handleOpenNavigation(true)}
         >
           Menu
+          <span
+            className={`absolute -bottom-3 left-1/2 w-1.5 h-1.5 ${
+              pathname === "/about" || pathname === "/projects"
+                ? "bg-zinc-800  dark:bg-white"
+                : "bg-white"
+            } rounded-full 
+            transform -translate-x-1/2 -translate-y-1/2 scale-0 rotate-0
+            transition-transform duration-400 ease-in-out
+            group-hover:scale-100 group-hover:rotate-360
+            peer-active:scale-100 peer-active:rotate-360`}
+          />
         </AnimationHover>
         <div className="max-sm:hidden">
           <ModeToggle />
