@@ -7,7 +7,6 @@ import { useState } from "react";
 import {
   Pagination,
   PaginationContent,
-  PaginationEllipsis,
   PaginationItem,
   PaginationLink,
   PaginationNext,
@@ -35,7 +34,7 @@ export default function Projects() {
   return (
     <div className="max-w-[70rem] px-8 mx-auto min-h-screen">
       <div className="pt-44">
-        <h2 className="font-title max-w-[900px] text-6xl">
+        <h2 className="font-title max-w-[900px] w-full text-6xl max-[500px]:text-5xl max-[400px]:text-[2.8rem]">
           Transformando desafios em sistemas eficientes
         </h2>
       </div>
@@ -62,13 +61,12 @@ export default function Projects() {
         </div>
         <div className="mt-16">
           <div className="flex flex-col gap-3">
-            <div className="flex items-center justify-between mb-6 text-zinc-400 dark:text-zinc-500 text-xs font-medium">
+            <div className="flex items-center justify-between mb-6 px-6 text-zinc-400 dark:text-zinc-500 text-xs font-medium">
               <span>NOME</span>
-              <span>LINGUAGENS</span>
+              <span>ANO</span>
             </div>
             <hr className="border-t border-zinc-200 dark:border-zinc-500 pointer-events-none" />
           </div>
-          <Project />
           <Project />
           <Project />
           <Project />

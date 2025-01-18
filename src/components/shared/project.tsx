@@ -21,9 +21,8 @@ export default function Project() {
             <div className="flex flex-col gap-3">
               <h2 className="text-3xl font-title">Nome do projeto</h2>
             </div>
-            <div className="flex items-center gap-3 max-[480px]:flex-col max-[480px]:gap-2">
-              <span>Typescript</span>
-              <span>CSS</span>
+            <div>
+              <span>2025</span>
             </div>
           </div>
           <hr className="border-t border-zinc-200 dark:border-zinc-500 pointer-events-none" />
@@ -35,9 +34,8 @@ export default function Project() {
               <div className="flex flex-col gap-3">
                 <h2 className="text-3xl font-title">Nome do projeto</h2>
               </div>
-              <div className="flex items-center gap-3">
-                <span>Typescript</span>
-                <span>CSS</span>
+              <div>
+                <span>2025</span>
               </div>
             </div>
             <hr className="border-t border-zinc-200 dark:border-zinc-500 pointer-events-none" />
