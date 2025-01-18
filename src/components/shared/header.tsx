@@ -29,9 +29,7 @@ export default function Header() {
   return (
     <header
       className={`w-full p-8 flex items-center justify-between text-base absolute text-textWhite font-medium ${
-        pathname === "/about" || pathname === "/projects"
-          ? "text-zinc-800 dark:text-textWhite"
-          : ""
+        pathname === "/" ? "" : "text-zinc-800 dark:text-textWhite"
       }`}
     >
       <AnimationHover as={Link} href="/">
@@ -48,9 +46,7 @@ export default function Header() {
             {item.label}
             <span
               className={`absolute -bottom-3 left-1/2 w-1.5 h-1.5 ${
-                pathname === "/about" || pathname === "/projects"
-                  ? "bg-zinc-800  dark:bg-white"
-                  : "bg-white"
+                pathname === "/" ? " bg-white" : "bg-zinc-800  dark:bg-white"
               } rounded-full 
               transform -translate-x-1/2 -translate-y-1/2 scale-0 rotate-0
               transition-transform duration-400 ease-in-out
@@ -70,9 +66,7 @@ export default function Header() {
           Menu
           <span
             className={`absolute -bottom-3 left-1/2 w-1.5 h-1.5 ${
-              pathname === "/about" || pathname === "/projects"
-                ? "bg-zinc-800  dark:bg-white"
-                : "bg-white"
+              pathname === "/" ? " bg-white" : "bg-zinc-800  dark:bg-white"
             } rounded-full 
             transform -translate-x-1/2 -translate-y-1/2 scale-0 rotate-0
             transition-transform duration-400 ease-in-out
