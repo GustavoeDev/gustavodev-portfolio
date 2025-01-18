@@ -23,7 +23,7 @@ export default function Intro() {
           <p className="text-zinc-600 dark:text-zinc-400">
             Desenvolvedor FrontEnd
           </p>
-          <span className="text-gray-800 dark:text-textWhite">
+          <span className="text-zinc-800 dark:text-textWhite">
             Sou Gustavo Emanuel, estudante de Análise e Desenvolvimento de
             Sistemas, apaixonado por desenvolvimento web e focado em criar
             soluções inovadoras com tecnologias modernas.

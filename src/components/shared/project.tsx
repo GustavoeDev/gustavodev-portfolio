@@ -26,12 +26,12 @@ export default function Project() {
               <span>CSS</span>
             </div>
           </div>
-          <hr className="border-t border-gray-200 dark:border-gray-500 pointer-events-none" />
+          <hr className="border-t border-zinc-200 dark:border-zinc-500 pointer-events-none" />
         </Link>
       ) : (
         <HoverCardTrigger asChild>
           <Link href="/" className="block">
-            <div className="px-6 py-8 flex items-center justify-between hover:mx-8 transition-all duration-700 hover:text-gray-400">
+            <div className="px-6 py-8 flex items-center justify-between hover:mx-8 transition-all duration-700 hover:text-zinc-400">
               <div className="flex flex-col gap-3">
                 <h2 className="text-3xl font-title">Nome do projeto</h2>
               </div>
@@ -40,7 +40,7 @@ export default function Project() {
                 <span>CSS</span>
               </div>
             </div>
-            <hr className="border-t border-gray-200 dark:border-gray-500 pointer-events-none" />
+            <hr className="border-t border-zinc-200 dark:border-zinc-500 pointer-events-none" />
           </Link>
         </HoverCardTrigger>
       )}
