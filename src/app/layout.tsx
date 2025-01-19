@@ -9,6 +9,7 @@ import { ThemeProvider } from "@/components/shared/theme-provider";
 import Navigation from "@/components/shared/navigation";
 import Footer from "@/components/shared/footer";
 import NavigationProvider from "@/contexts/openNavigationContext";
+import ReactLenis from "lenis/react";
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
@@ -34,27 +35,29 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className="max-lg:text-[87.5%]">
-      <body
-        className={cn(
-          "bg-background font-sans antialiased relative",
-          geistSans.variable,
-          geistMono.variable
-        )}
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
+      <ReactLenis root>
+        <body
+          className={cn(
+            "bg-background font-sans antialiased relative",
+            geistSans.variable,
+            geistMono.variable
+          )}
         >
-          <NavigationProvider>
-            <Navigation />
-            <Header />
-            {children}
-            <Footer />
-          </NavigationProvider>
-        </ThemeProvider>
-      </body>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <NavigationProvider>
+              <Navigation />
+              <Header />
+              {children}
+              <Footer />
+            </NavigationProvider>
+          </ThemeProvider>
+        </body>
+      </ReactLenis>
     </html>
   );
 }
