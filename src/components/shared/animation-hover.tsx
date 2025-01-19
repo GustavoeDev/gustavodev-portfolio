@@ -10,6 +10,7 @@ interface AnimationHoverProps {
   target?: string;
   className?: string;
   onClick?: (event: any) => void;
+  type?: string;
   rel?: string;
 }
 
@@ -24,6 +25,7 @@ const AnimationHover = forwardRef<HTMLElement, AnimationHoverProps>(
       className,
       onClick,
       rel,
+      type,
       ...props
     }: AnimationHoverProps,
     ref
@@ -55,6 +57,7 @@ const AnimationHover = forwardRef<HTMLElement, AnimationHoverProps>(
         {...(className && { className })}
         {...(onClick && { onClick })}
         {...(rel && { rel })}
+        {...(type && { type })}
         {...props}
       >
         {children}
