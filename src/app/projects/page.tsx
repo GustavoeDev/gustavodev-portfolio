@@ -12,9 +12,12 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+import useIsMobile from "@/hooks/useIsMobile";
 
 export default function Projects() {
   const [isSelected, setIsSelected] = useState<string | null>("");
+
+  const isMobile = useIsMobile();
 
   const filterYearItems = [
     {
@@ -60,21 +63,34 @@ export default function Projects() {
           })}
         </div>
         <div className="mt-16">
-          <div className="flex flex-col gap-3">
-            <div className="flex items-center justify-between mb-6 px-6 text-zinc-400 dark:text-zinc-500 text-xs font-medium">
-              <span>NOME</span>
-              <span>ANO</span>
+          {isMobile ? (
+            <div className="grid grid-cols-2 gap-10 mt-10 max-[648px]:grid-cols-1">
+              <Project />
+              <Project />
+              <Project />
+              <Project />
             </div>
-            <hr className="border-t border-zinc-200 dark:border-zinc-500 pointer-events-none" />
-          </div>
-          <Project />
-          <Project />
-          <Project />
-          <Project />
-          <Project />
-          <Project />
+          ) : (
+            <>
+              <div className="flex flex-col gap-3">
+                <div className="flex items-center justify-between mb-6 px-6 text-zinc-400 dark:text-zinc-500 text-xs font-medium">
+                  <span>NOME</span>
+                  <span>ANO</span>
+                </div>
+                <hr className="border-t border-zinc-200 dark:border-zinc-500 pointer-events-none" />
+              </div>
+              <div>
+                <Project />
+                <Project />
+                <Project />
+                <Project />
+                <Project />
+                <Project />
+              </div>
+            </>
+          )}
         </div>
-        <div className="mt-8">
+        <div className="mt-12">
           <Pagination>
             <PaginationContent>
               <PaginationItem>

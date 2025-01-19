@@ -1,19 +1,32 @@
+"use client";
+
 import AnimationHover from "@/components/shared/animation-hover";
 import Project from "@/components/shared/project";
+import useIsMobile from "@/hooks/useIsMobile";
 import Link from "next/link";
 
 export default function RecentProjects() {
+  const isMobile = useIsMobile();
+
   return (
     <div className="mt-28">
       <p className="mb-8 text-zinc-400 dark:text-zinc-500 text-xs font-medium">
         PROJETOS RECENTES
       </p>
       <hr className="border-t border-zinc-200 dark:border-zinc-500 pointer-events-none" />
-      <div className="">
-        <Project />
-        <Project />
-        <Project />
-      </div>
+      {isMobile ? (
+        <div className="grid grid-cols-2 gap-10 mt-10 max-[648px]:grid-cols-1">
+          <Project />
+          <Project />
+        </div>
+      ) : (
+        <div className="">
+          <Project />
+          <Project />
+          <Project />
+        </div>
+      )}
+
       <div className="flex justify-center items-center my-16">
         <AnimationHover
           as={Link}
