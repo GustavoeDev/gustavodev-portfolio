@@ -8,6 +8,8 @@ import { useContext } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 
+import LogoGustavo from "@/assets/gustavoedev-logo.svg";
+
 export default function Header() {
   const { handleOpenNavigation } = useContext(NavigationContext);
   const pathname = usePathname();
@@ -35,11 +37,19 @@ export default function Header() {
     >
       <AnimationHover as={Link} href="/">
         <div className="flex items-center">
-          <div className="w-[40px] h-[50px]">
-            <Image src="/gustavoedev-logo.svg" alt="" width={50} height={50} />
-          </div>
+          <LogoGustavo
+            className={`${
+              pathname === "/" ? "text-white" : "text-zinc-800 dark:text-white"
+            } `}
+          />
           <div className="w-max">
-            <h2 className="animate-typing overflow-hidden whitespace-nowrap box-content border-r-4 border-r-white text-lg text-white font-bold">
+            <h2
+              className={`animate-typing overflow-hidden whitespace-nowrap box-content border-r-4 text-lg ${
+                pathname === "/"
+                  ? "text-white border-r-white"
+                  : "text-zinc-800 border-r-zinc-800 dark:text-white"
+              }  font-bold`}
+            >
               ustavo
             </h2>
           </div>
