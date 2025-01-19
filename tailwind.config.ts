@@ -22,9 +22,32 @@ const config: Config = {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
+        typing: {
+          "0%": {
+            width: "0%",
+            visibility: "hidden",
+          },
+          "90%": {
+            width: "100%",
+            visibility: "visible",
+          },
+          "100%": {
+            width: "100%",
+            visibility: "visible",
+          },
+        },
+        blink: {
+          "50%": {
+            borderColor: "transparent",
+          },
+          "100%": {
+            borderColor: "white",
+          },
+        },
       },
       animation: {
         slide: "slide 14s linear infinite",
+        typing: "typing 3s steps(20) 3s infinite alternate, blink .4s infinite",
       },
       rotate: {
         "360": "360deg",

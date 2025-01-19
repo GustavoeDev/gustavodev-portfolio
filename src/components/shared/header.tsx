@@ -6,6 +6,7 @@ import { ModeToggle } from "./theme-toggle";
 import { NavigationContext } from "@/contexts/openNavigationContext";
 import { useContext } from "react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 export default function Header() {
   const { handleOpenNavigation } = useContext(NavigationContext);
@@ -33,7 +34,16 @@ export default function Header() {
       }`}
     >
       <AnimationHover as={Link} href="/">
-        © Feito por Gustavo
+        <div className="flex items-center">
+          <div className="w-[40px] h-[50px]">
+            <Image src="/gustavoedev-logo.svg" alt="" width={50} height={50} />
+          </div>
+          <div className="w-max">
+            <h2 className="animate-typing overflow-hidden whitespace-nowrap box-content border-r-4 border-r-white text-lg text-white font-bold">
+              ustavo
+            </h2>
+          </div>
+        </div>
       </AnimationHover>
       <nav className="flex items-center gap-8">
         {navigationItems.map((item) => (
