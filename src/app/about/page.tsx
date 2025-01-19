@@ -48,8 +48,8 @@ export default function About() {
         <Skills />
       </div>
 
-      <div className="my-36 flex items-center justify-center gap-28">
-        <div className="w-[350px] max-w-[100%] h-auto rounded-sm overflow-hidden">
+      <div className="my-36 flex items-center justify-center gap-28 max-[800px]:flex-col max-[800px]:gap-16 max-[800px]:my-28">
+        <div className="w-[350px] max-w-[100%] h-auto rounded-sm overflow-hidden  max-[930px]:w-full max-[800px]:w-[350px] max-[500px]:w-[300px]">
           <Image
             src="/photo-gustavo3.JPG"
             alt="Foto de Gustavo"
@@ -58,7 +58,7 @@ export default function About() {
             className="object-cover h-full w-full"
           />
         </div>
-        <div className="max-w-[400px] flex flex-col gap-6">
+        <div className="max-w-[400px] w-full flex flex-col gap-6">
           <h3 className="text-3xl font-title font-medium">
             Em constante evolução
           </h3>

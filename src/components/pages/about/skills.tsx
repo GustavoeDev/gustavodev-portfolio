@@ -1,6 +1,6 @@
 export default function Skills() {
   return (
-    <div className="grid grid-cols-3 gap-16">
+    <div className="grid grid-cols-3 gap-16 max-[600px]:grid-cols-2">
       <div className="flex flex-col gap-6">
         <div>
           <p className="mb-6 text-zinc-400 dark:text-zinc-500 text-sm font-medium">
